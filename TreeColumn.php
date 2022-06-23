@@ -166,7 +166,7 @@ class TreeColumn extends BaseObject
     protected function renderHeaderCellContent()
     {
         if ($this->header !== null || $this->label === null && $this->attribute === null) {
-            return trim($this->header) !== '' ? $this->header : $this->grid->emptyCell;
+            return trim((string) $this->header) !== '' ? $this->header : $this->grid->emptyCell;
         }
 
         $provider = $this->grid->dataProvider;
